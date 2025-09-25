@@ -1,0 +1,779 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: content-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(216, 216, 216, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.navbar h1 {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navbar h2 {
+  color: #ccc;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: #555;
+}
+
+.navbar ul li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+
+/* Estilos base comunes para todos los contenedores */
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(105, 105, 105, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor específico para "Sobre mí" */
+.container-about {
+  max-width: 550px;
+  width: 90%;
+  margin: 0 auto 0 5%;
+  height: auto;
+  min-height: 300px;
+  padding: 2rem;
+  flex-direction: column;
+}
+
+/* Contenedor específico para "Proyectos" */
+.container-projects {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+  height: auto;
+  min-height: 400px;
+  padding: 2rem;
+  flex-direction: column;
+}
+
+#sobre-mi p {
+  font-size: 1.1rem;
+  line-height: 2.0;
+  color: #d4d4d4;
+  margin: 0;
+  text-align: center;
+  padding: 2rem 3rem;
+  word-spacing: 0.2rem;
+}
+
+/* Estilos para botones de redes sociales */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  min-width: 120px;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.social-btn.linkedin:hover,
+.social-btn.github:hover,
+.social-btn.email:hover {
+  background: rgba(0, 119, 181, 0.3);
+  border-color: rgba(0, 119, 181, 0.6);
+  color: #ffffff;
+}
+
+.social-icon {
+  font-size: 1.2rem;
+}
+
+/* Efecto hover para palabras individuales */
+.word {
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+  margin: 0 0.1rem;
+  cursor: pointer;
+}
+
+.word:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255,255,255,0.6);
+}
+
+/* Si no usas spans, este es un efecto alternativo */
+#sobre-mi p {
+  position: relative;
+}
+
+#sobre-mi p::selection {
+  background: rgba(255,255,255,0.3);
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7) contrast(1.1);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.background-video::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* Estilos para la sección de proyectos */
+#proyectos {
+  margin-top: 2rem;
+  display: none; /* Inicialmente oculto */
+}
+
+#proyectos.active {
+  display: flex;
+}
+
+#proyectos h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  color: #d4d4d4;
+  line-height: 1.6;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  margin-bottom: 1.5rem;
+}
+
+.tech-label {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tech-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+.tech-icon:hover {
+  transform: translateY(-3px) scale(1.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  filter: brightness(1.3);
+}
+
+/* Tooltip personalizado */
+.tech-icon[title] {
+  position: relative !important;
+}
+
+.tech-icon[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.project-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-align: center;
+  margin-top: auto;
+}
+
+.project-btn:hover {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(44, 62, 80, 0.6);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.project-btn-disabled {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%) !important;
+  color: #adb5bd !important;
+  cursor: not-allowed !important;
+  opacity: 0.7;
+}
+
+.project-btn-disabled:hover {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%) !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* Estilos para Certificaciones */
+.container-certifications {
+  max-width: 900px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1rem 1.5rem;
+  flex-direction: column;
+  height: auto;
+  overflow: visible;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container-certifications h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+
+
+.certifications-section {
+  margin-bottom: 1.5rem;
+}
+
+.cert-category {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.certification-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.8rem 0.6rem;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100px;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cert-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.cert-header h4 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.cert-level {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cert-level-progress {
+  background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%) !important;
+  color: #000 !important;
+  animation: pulse-progress 2s infinite;
+}
+
+@keyframes pulse-progress {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.cert-description {
+  color: #d4d4d4;
+  line-height: 1.5;
+  margin: 0;
+  flex-grow: 1;
+  font-size: 0.95rem;
+}
+
+.cert-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.cert-institution,
+.cert-date {
+  color: #b3b3b3;
+  font-weight: 500;
+}
+
+.cert-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-align: center;
+  margin-top: auto;
+}
+
+.cert-btn:hover {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(44, 62, 80, 0.6);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Botones pequeños para certificaciones */
+.cert-btn-small {
+  display: inline-block;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.cert-btn-small:hover {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(44, 62, 80, 0.6);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cert-btn-small.cert-btn-disabled {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%) !important;
+  color: #adb5bd !important;
+  cursor: not-allowed !important;
+  opacity: 0.7;
+}
+
+.cert-btn-small.cert-btn-disabled:hover {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%) !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* Estilos para botones de modal */
+.cert-modal-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Estilos para el Modal de Certificados */
+.cert-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cert-modal-content {
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  max-width: 95vw;
+  max-height: 95vh;
+  width: auto;
+  min-width: 800px;
+  position: relative;
+  animation: slideIn 0.3s ease;
+  overflow: hidden;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 2001;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.cert-modal-close:hover {
+  background: rgba(255, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.cert-modal-header {
+  padding: 20px 25px 10px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cert-modal-header h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cert-modal-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.cert-modal-body img {
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.cert-modal-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #b0b0b0;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 60px;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  min-width: 600px;
+  min-height: 300px;
+}
+
+.cert-modal-placeholder small {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Responsivo para el modal */
+@media (max-width: 768px) {
+  .cert-modal-content {
+    max-width: 95vw;
+    max-height: 90vh;
+    min-width: 350px;
+    margin: 10px;
+  }
+  
+  .cert-modal-placeholder {
+    min-width: 300px;
+    min-height: 200px;
+    padding: 40px 20px;
+    font-size: 1.1rem;
+  }
+  
+  .cert-modal-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .cert-modal-body {
+    padding: 20px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-modal-content {
+    min-width: 320px;
+  }
+  
+  .cert-modal-placeholder {
+    min-width: 280px;
+    min-height: 180px;
+    padding: 30px 15px;
+    font-size: 1rem;
+  }
+}
+
+

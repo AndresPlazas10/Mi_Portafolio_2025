@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="Javascript/wordAnimation.js"></script>
+    <script src="Javascript/navigation.js"></script>
+    <script src="Javascript/tooltips.js"></script>
+    <script src="Javascript/certModal.js"></script>
+
+  </head>
+  <body>
+    <video
+      class="background-video"
+      autoplay
+      muted
+      loop
+      preload="auto"
+      playsinline
+    >
+      <source src="assets/217508.mp4" type="video/mp4" />
+      Tu navegador no soporta el elemento video.
+    </video>
+    <header>
+      <nav class="navbar">
+        <div class="profile-section">
+          <img
+            src="assets/WhatsApp Image 2025-09-25 at 09.36.35.jpeg"
+            alt="Andrés Plazas"
+            class="profile-photo"
+          />
+          <div class="profile-info">
+            <h1>Andrés Plazas 🧑🏻‍💻 🇨🇴</h1>
+            <h2>Software_Developer_Jr</h2>
+          </div>
+        </div>
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí </a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#certificaciones">Certificaciones</a></li>
+        </ul>
+      </nav>
+      <main>
+        <div class="container container-about">
+          <section id="sobre-mi">
+            <p>
+              Soy Andrés Felipe Plazas Mendivelso, estudiante de Ingeniería de
+              Sistemas en la Universidad de Boyacá 🏫, actualmente cursando
+              séptimo semestre. Formo parte del semillero de investigación
+              SYSDITEL de la Facultad de Ciencias e ingeniería. Soy un
+              desarrollador junior apasionado por la tecnología y el desarrollo
+              de software. Disfruto aprender nuevas tecnologías, asumir retos y
+              encontrar oportunidades que me permitan crecer profesional y
+              personalmente ✨.
+            </p>
+            <div class="social-buttons">
+              <a
+                href="https://www.linkedin.com/in/plazas-mendivelso-andrés-felipe-b122b7309"
+                target="_blank"
+                class="social-btn linkedin"
+              >
+                <span class="social-icon">💼</span>
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/AndresPlazas10"
+                target="_blank"
+                class="social-btn github"
+              >
+                <span class="social-icon">💻</span>
+                GitHub
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <div class="container container-projects" id="proyectos">
+          <section>
+            <h2>Mis Proyectos 🚀</h2>
+            <div class="projects-grid">
+              <div class="project-card">
+                <h3>Calculadora de direcciones IP, FLSM, VLSM</h3>
+                <p>
+                  Proyecto desarrollado como trabajo en mi universidad, en conjunto con un compañero, nos
+                  permite calcular direcciones ip usando técnicas de subnetting
+                  como vlsm, flsm.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-label">Tecnologías:</span>
+                  <div class="tech-icons">
+                    <img
+                      src="assets/html.png"
+                      alt="HTML"
+                      class="tech-icon"
+                      title="HTML5"
+                    />
+                    <img
+                      src="assets/css-3.png"
+                      alt="CSS"
+                      class="tech-icon"
+                      title="CSS3"
+                    />
+                    <img
+                      src="assets/js.png"
+                      alt="JavaScript"
+                      class="tech-icon"
+                      title="JavaScript"
+                    />
+                  </div>
+                </div>
+                <a href="https://andresplazas10.github.io/Web_Yessand/index.html" target="_blank" class="project-btn"
+                  >Ver Proyecto 🔗</a
+                >
+              </div>
+              <div class="project-card">
+                <h3>Catálogo digital gastronómico en Tunja (Semillero)</h3>
+                <p>
+                  Proyecto en desarrollo que busca digitalizar la oferta
+                  gastronómica de la ciudad, permitiendo a los usuarios explorar
+                  menús de diferentes restarurantes en Tunja
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-label">Tecnologías:</span>
+                  <div class="tech-icons">
+                    <img
+                      src="assets/react_native.png"
+                      alt="React Native"
+                      class="tech-icon"
+                      title="React Native"
+                    />
+                    <img
+                      src="assets/django.png"
+                      alt="Django"
+                      class="tech-icon"
+                      title="Django"
+                    />
+                    <img
+                      src="assets/mysql.png"
+                      alt="MySQL"
+                      class="tech-icon"
+                      title="MySQL"
+                    />
+                  </div>
+                </div>
+                <span class="project-btn project-btn-disabled"
+                  >En desarrollo ⏱️</span
+                >
+              </div>
+              <div class="project-card">
+                <h3>Gestor de inventario FIERMART</h3>
+                <p>
+                  Proyecto en desarrollado como parte de un trabajo en equipo,
+                  permite gestionar el inventario de productos de una cigarreria
+                  cerca de mi universidad.
+                </p>
+                <div class="tech-stack">
+                  <span class="tech-label">Tecnologías:</span>
+                  <div class="tech-icons">
+                    <img
+                      src="assets/Laravel-Logo.wine.svg"
+                      alt="Laravel"
+                      class="tech-icon"
+                      title="Laravel"
+                    />
+                    <img
+                      src="assets/mysql.png"
+                      alt="MySQL"
+                      class="tech-icon"
+                      title="MySQL"
+                    />
+                  </div>
+                </div>
+                <span class="project-btn project-btn-disabled"
+                  >En desarrollo ⏱️</span
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="container container-certifications" id="certificaciones">
+          <section>
+            <h2>Certificaciones en platzi 🏆</h2>
+            
+            <div class="certifications-section">
+              <h3 class="cert-category">Inglés 🌍</h3>
+              <div class="certifications-grid">
+                <div class="certification-card">
+                  <div class="cert-header">
+                    <h4>Diploma Intermediate Core</h4>
+                  </div>
+                  <button class="cert-btn-small cert-modal-btn" data-cert-title="Diploma Intermediate Core" data-cert-image="assets/certificates/diploma-intermediate-core.png">Ver 🔗</button>
+                </div>
+                
+                <div class="certification-card">
+                  <div class="cert-header">
+                    <h4>Certificación Nivel B2</h4>
+                  </div>
+                  <span class="cert-btn-small cert-btn-disabled">En Proceso</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="certifications-section">
+              <h3 class="cert-category">Desarrollo Web 💻</h3>
+              <div class="certifications-grid">
+                <div class="certification-card">
+                  <div class="cert-header">
+                    <h4>Curso de HTML y CSS</h4>
+                  </div>
+                  <button class="cert-btn-small cert-modal-btn" data-cert-title="Curso de HTML y CSS" data-cert-image="assets/certificates/html-css.png">Ver 🔗</button>
+                </div>
+                
+                <div class="certification-card">
+                  <div class="cert-header">
+                    <h4>Curso de JavaScript</h4>
+                  </div>
+                  <button class="cert-btn-small cert-modal-btn" data-cert-title="Curso de JavaScript" data-cert-image="assets/certificates/javascript.png">Ver 🔗</button>
+                </div>
+                
+                <div class="certification-card">
+                  <div class="cert-header">
+                    <h4>Curso de React</h4>
+                  </div>
+                  <button class="cert-btn-small cert-modal-btn" data-cert-title="Curso de React" data-cert-image="assets/certificates/react.png">Ver 🔗</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+
+      </main>
+    </header>
+
+    <!-- Modal para mostrar certificados -->
+    <div id="certModal" class="cert-modal">
+      <div class="cert-modal-content">
+        <span class="cert-modal-close">&times;</span>
+        <div class="cert-modal-header">
+          <h3 id="certModalTitle">Certificado</h3>
+        </div>
+        <div class="cert-modal-body">
+          <img id="certModalImage" src="" alt="Certificado" />
+          <p class="cert-modal-placeholder">
+            📁 Espacio para la imagen del certificado<br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
