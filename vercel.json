@@ -1,25 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/auth/callback",
-      "destination": "/auth/callback.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
-    }
-  ],
   "cleanUrls": true,
   "trailingSlash": false
 }

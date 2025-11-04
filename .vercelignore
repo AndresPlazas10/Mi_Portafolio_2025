@@ -1,0 +1,6 @@
+# Archivos que Vercel debe ignorar
+.DS_Store
+.env.local
+.env.production
+node_modules
+*.log
