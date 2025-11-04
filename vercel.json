@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "pages/api/**/*.js": {
-      "runtime": "@vercel/node"
-    }
-  },
   "rewrites": [
     {
       "source": "/auth/callback",
@@ -24,5 +19,7 @@
         }
       ]
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
