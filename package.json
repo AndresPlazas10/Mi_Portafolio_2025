@@ -1,0 +1,44 @@
+{
+  "name": "portfolio-andres-plazas",
+  "version": "2.0.0",
+  "description": "Portfolio personal interactivo de Andrés Felipe Plazas Mendivelso",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx live-server",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Deploy to your preferred hosting service'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndresPlazas10/Mi_Portafolio_2025.git"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "frontend",
+    "javascript",
+    "css3",
+    "html5",
+    "responsive-design",
+    "web-development"
+  ],
+  "author": {
+    "name": "Andrés Felipe Plazas Mendivelso",
+    "url": "https://github.com/AndresPlazas10",
+    "linkedin": "https://www.linkedin.com/in/plazas-mendivelso-andrés-felipe-b122b7309"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndresPlazas10/Mi_Portafolio_2025/issues"
+  },
+  "homepage": "https://github.com/AndresPlazas10/Mi_Portafolio_2025#readme",
+  "devDependencies": {},
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

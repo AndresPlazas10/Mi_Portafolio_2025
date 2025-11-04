@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Portfolio</title>
+    <title>Andrés Plazas - Portfolio de Desarrollador</title>
+    <meta
+      name="description"
+      content="Portfolio de Andrés Felipe Plazas Mendivelso, estudiante de Ingeniería de Sistemas y desarrollador junior especializado en tecnologías web."
+    />
+    <meta
+      name="keywords"
+      content="desarrollador, programador, portfolio, sistemas, universidad boyacá, javascript, react, django"
+    />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="Javascript/wordAnimation.js"></script>
-    <script src="Javascript/navigation.js"></script>
-    <script src="Javascript/tooltips.js"></script>
-    <script src="Javascript/certModal.js"></script>
-
+    <script src="Javascript/wordAnimation.js" defer></script>
+    <script src="Javascript/navigation.js" defer></script>
+    <script src="Javascript/tooltips.js" defer></script>
+    <script src="Javascript/certModal.js" defer></script>
+    <script src="Javascript/projectLinks.js" defer></script>
   </head>
   <body>
     <video
@@ -19,16 +27,18 @@
       loop
       preload="auto"
       playsinline
+      aria-label="Video de fondo decorativo"
     >
       <source src="assets/217508.mp4" type="video/mp4" />
       Tu navegador no soporta el elemento video.
     </video>
+
     <header>
-      <nav class="navbar">
+      <nav class="navbar" role="navigation" aria-label="Navegación principal">
         <div class="profile-section">
           <img
             src="assets/WhatsApp Image 2025-09-25 at 09.36.35.jpeg"
-            alt="Andrés Plazas"
+            alt="Foto de perfil de Andrés Plazas"
             class="profile-photo"
           />
           <div class="profile-info">
@@ -36,200 +46,285 @@
             <h2>Software_Developer_Jr</h2>
           </div>
         </div>
-        <ul>
-          <li><a href="#sobre-mi">Sobre mí </a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#certificaciones">Certificaciones</a></li>
+        <ul role="menubar">
+          <li role="none"><a href="#sobre-mi" role="menuitem">Sobre mí</a></li>
+          <li role="none">
+            <a href="#proyectos" role="menuitem">Proyectos</a>
+          </li>
+          <li role="none">
+            <a href="#certificaciones" role="menuitem">Certificaciones</a>
+          </li>
         </ul>
       </nav>
-      <main>
-        <div class="container container-about">
-          <section id="sobre-mi">
-            <p>
-              Soy Andrés Felipe Plazas Mendivelso, estudiante de Ingeniería de
-              Sistemas en la Universidad de Boyacá 🏫, actualmente cursando
-              séptimo semestre. Formo parte del semillero de investigación
-              SYSDITEL de la Facultad de Ciencias e ingeniería. Soy un
-              desarrollador junior apasionado por la tecnología y el desarrollo
-              de software. Disfruto aprender nuevas tecnologías, asumir retos y
-              encontrar oportunidades que me permitan crecer profesional y
-              personalmente ✨.
-            </p>
-            <div class="social-buttons">
-              <a
-                href="https://www.linkedin.com/in/plazas-mendivelso-andrés-felipe-b122b7309"
-                target="_blank"
-                class="social-btn linkedin"
-              >
-                <span class="social-icon">💼</span>
-                LinkedIn
-              </a>
-              <a
-                href="https://github.com/AndresPlazas10"
-                target="_blank"
-                class="social-btn github"
-              >
-                <span class="social-icon">💻</span>
-                GitHub
-              </a>
-            </div>
-          </section>
-        </div>
-
-        <div class="container container-projects" id="proyectos">
-          <section>
-            <h2>Mis Proyectos 🚀</h2>
-            <div class="projects-grid">
-              <div class="project-card">
-                <h3>Calculadora de direcciones IP, FLSM, VLSM</h3>
-                <p>
-                  Proyecto desarrollado como trabajo en mi universidad, en conjunto con un compañero, nos
-                  permite calcular direcciones ip usando técnicas de subnetting
-                  como vlsm, flsm.
-                </p>
-                <div class="tech-stack">
-                  <span class="tech-label">Tecnologías:</span>
-                  <div class="tech-icons">
-                    <img
-                      src="assets/html.png"
-                      alt="HTML"
-                      class="tech-icon"
-                      title="HTML5"
-                    />
-                    <img
-                      src="assets/css-3.png"
-                      alt="CSS"
-                      class="tech-icon"
-                      title="CSS3"
-                    />
-                    <img
-                      src="assets/js.png"
-                      alt="JavaScript"
-                      class="tech-icon"
-                      title="JavaScript"
-                    />
-                  </div>
-                </div>
-                <a href="https://andresplazas10.github.io/Web_Yessand/index.html" target="_blank" class="project-btn"
-                  >Ver Proyecto 🔗</a
-                >
-              </div>
-              <div class="project-card">
-                <h3>Catálogo digital gastronómico en Tunja (Semillero)</h3>
-                <p>
-                  Proyecto en desarrollo que busca digitalizar la oferta
-                  gastronómica de la ciudad, permitiendo a los usuarios explorar
-                  menús de diferentes restarurantes en Tunja
-                </p>
-                <div class="tech-stack">
-                  <span class="tech-label">Tecnologías:</span>
-                  <div class="tech-icons">
-                    <img
-                      src="assets/react_native.png"
-                      alt="React Native"
-                      class="tech-icon"
-                      title="React Native"
-                    />
-                    <img
-                      src="assets/django.png"
-                      alt="Django"
-                      class="tech-icon"
-                      title="Django"
-                    />
-                    <img
-                      src="assets/mysql.png"
-                      alt="MySQL"
-                      class="tech-icon"
-                      title="MySQL"
-                    />
-                  </div>
-                </div>
-                <span class="project-btn project-btn-disabled"
-                  >En desarrollo ⏱️</span
-                >
-              </div>
-              <div class="project-card">
-                <h3>Gestor de inventario FIERMART</h3>
-                <p>
-                  Proyecto en desarrollado como parte de un trabajo en equipo,
-                  permite gestionar el inventario de productos de una cigarreria
-                  cerca de mi universidad.
-                </p>
-                <div class="tech-stack">
-                  <span class="tech-label">Tecnologías:</span>
-                  <div class="tech-icons">
-                    <img
-                      src="assets/Laravel-Logo.wine.svg"
-                      alt="Laravel"
-                      class="tech-icon"
-                      title="Laravel"
-                    />
-                    <img
-                      src="assets/mysql.png"
-                      alt="MySQL"
-                      class="tech-icon"
-                      title="MySQL"
-                    />
-                  </div>
-                </div>
-                <span class="project-btn project-btn-disabled"
-                  >En desarrollo ⏱️</span
-                >
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div class="container container-certifications" id="certificaciones">
-          <section>
-            <h2>Certificaciones y Títulos 🏆</h2>
-            
-            <div class="certifications-section">
-              <div class="certifications-grid">
-                <div class="certification-card">
-                  <div class="cert-header">
-                    <h4>Técnico en Sistemas 🎓</h4>
-                  </div>
-                  <button class="cert-btn-small cert-modal-btn" data-cert-title="Técnico en Sistemas" data-cert-image="assets/certificates/tecnico-sistemas.jpeg">Ver 🔗</button>
-                </div>
-                
-                <div class="certification-card">
-                  <div class="cert-header">
-                    <h4>Certificación ingles nivel B1 🌍</h4>
-                  </div>
-                  <button class="cert-btn-small cert-modal-btn" data-cert-title="Diploma Intermediate Core" data-cert-image="assets/certificates/diploma-intermediate-core.png">Ver 🔗</button>
-                </div>
-                
-                <div class="certification-card">
-                  <div class="cert-header">
-                    <h4>Certificación ingles nivel B2 🌍</h4>
-                  </div>
-                  <span class="cert-btn-small cert-btn-disabled">En Proceso</span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-
-      </main>
     </header>
 
+    <main>
+      <div class="container container-about">
+        <section id="sobre-mi" aria-labelledby="about-heading">
+          <h2 id="about-heading" class="sr-only">Sobre mí</h2>
+          <p>
+            Mi nombre es Andrés Felipe Plazas Mendivelso, estudiante de sexto
+            semestre de Ingeniería de Sistemas en la Universidad de Boyacá.
+            Formo parte del semillero de investigación SYSDITEL de la Facultad
+            de Ciencias e Ingeniería, donde participo en el desarrollo de una
+            aplicación con inteligencia artificial enfocada en la gestión de
+            portafolios y reservas en restaurantes de Tunja. De manera personal,
+            me encuentro desarrollando una aplicación web para la gestión de
+            inventarios de cafeterías, restaurantes y bares. Cuento con
+            conocimientos en HTML, CSS, JavaScript, React y sus componentes,
+            Supabase, autenticación de usuarios, bases de datos, despliegues con
+            Vite y Vercel, Git y GitHub. Me apasiona la tecnología, la
+            innovación y el aprendizaje constante, siempre buscando nuevos
+            proyectos que me permitan fortalecer mis habilidades y aportar
+            soluciones prácticas mediante el desarrollo de software.
+          </p>
+          <div class="social-buttons">
+            <a
+              href="https://www.linkedin.com/in/plazas-mendivelso-andrés-felipe-b122b7309"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn linkedin"
+              aria-label="Perfil de LinkedIn de Andrés Plazas"
+            >
+              <span class="social-icon" aria-hidden="true">💼</span>
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/AndresPlazas10"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn github"
+              aria-label="Perfil de GitHub de Andrés Plazas"
+            >
+              <span class="social-icon" aria-hidden="true">💻</span>
+              GitHub
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="container container-projects" id="proyectos">
+        <section aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Mis Proyectos 🚀</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>Calculadora de direcciones IP, FLSM, VLSM</h3>
+              <p>
+                Proyecto desarrollado como trabajo en mi universidad, en
+                conjunto con un compañero, nos permite calcular direcciones ip
+                usando técnicas de subnetting como vlsm, flsm.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-label">Tecnologías:</span>
+                <div class="tech-icons">
+                  <img
+                    src="assets/html.png"
+                    alt="HTML5"
+                    class="tech-icon"
+                    title="HTML5"
+                  />
+                  <img
+                    src="assets/css-3.png"
+                    alt="CSS3"
+                    class="tech-icon"
+                    title="CSS3"
+                  />
+                  <img
+                    src="assets/js.png"
+                    alt="JavaScript"
+                    class="tech-icon"
+                    title="JavaScript"
+                  />
+                </div>
+              </div>
+              <a
+                href="https://andresplazas10.github.io/Web_Yessand/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-btn"
+                >Ver Proyecto 🔗</a
+              >
+            </article>
+            <article class="project-card">
+              <h3>Gestor de inventario FIERMART</h3>
+              <p>
+                Proyecto desarrollado como parte de un trabajo en equipo,
+                permite gestionar el inventario de productos de una cigarreria
+                cerca de mi universidad.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-label">Tecnologías:</span>
+                <div class="tech-icons">
+                  <img
+                    src="assets/js.png"
+                    alt="JavaScript"
+                    class="tech-icon"
+                    title="JavaScript"
+                  />
+                  <img
+                    src="assets/react-svgrepo-com.svg"
+                    alt="React"
+                    class="tech-icon"
+                    title="React"
+                  />
+                  <img
+                    src="assets/supabase-icon.svg"
+                    alt="Supabase"
+                    class="tech-icon"
+                    title="Supabase"
+                  />
+                    <img
+                    src="assets/postgresql-logo-svgrepo-com.svg"
+                    alt="PostgreSQL"
+                    class="tech-icon"
+                    title="PostgreSQL"
+                  />
+                </div>
+              </div>
+              <a
+                href="https://fiert-mart-1zxc.vercel.app/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-btn"
+                data-project="fiermart"
+                >Ver Proyecto 🔗</a
+              >
+            </article>
+            <article class="project-card">
+              <h3>Negozio - Sistema de Gestión Empresarial</h3>
+              <p>
+                Sistema avanzado de gestión de inventarios para cafeterías,
+                restaurantes y bares. Incluye control de stock, ventas, reportes
+                analíticos y gestión de empleados. Más completo y escalable que
+                proyectos anteriores.
+              </p>
+              <br />
+              <strong>🚧 En desarrollo - Versión demo disponible</strong>
+              <div class="tech-stack">
+                <span class="tech-label">Tecnologías:</span>
+                <div class="tech-icons">
+                   <img
+                    src="assets/js.png"
+                    alt="JavaScript"
+                    class="tech-icon"
+                    title="JavaScript"
+                  />
+                  <img
+                    src="assets/react-svgrepo-com.svg"
+                    alt="React"
+                    class="tech-icon"
+                    title="React"
+                  />
+                  <img
+                    src="assets/supabase-icon.svg"
+                    alt="Supabase"
+                    class="tech-icon"
+                    title="Supabase"
+                  />
+                    <img
+                    src="assets/postgresql-logo-svgrepo-com.svg"
+                    alt="PostgreSQL"
+                    class="tech-icon"
+                    title="PostgreSQL"
+                  />
+                </div>
+              </div>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-btn project-demo-link"
+                data-project="negozio"
+                >Ver Demo 🔗</a
+              >
+            </article>
+            <article class="project-card">
+              <h3>Catálogo digital gastronómico en Tunja (Semillero)</h3>
+              <p>
+                Proyecto del semillero de investigación que busca digitalizar la
+                oferta gastronómica de la ciudad, permitiendo a los usuarios
+                explorar menús de diferentes restaurantes en Tunja. Aún en fase
+                de planificación.
+              </p>
+              <div class="tech-stack">
+                <div class="tech-icons">
+                
+                </div>
+              </div>
+              <span class="project-btn project-btn-disabled"
+                >En planificación 📋</span
+              >
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div class="container container-certifications" id="certificaciones">
+        <section aria-labelledby="certifications-heading">
+          <h2 id="certifications-heading">Certificaciones y Títulos 🏆</h2>
+
+          <div class="certifications-section">
+            <div class="certifications-grid">
+              <article class="certification-card">
+                <div class="cert-header">
+                  <h3>Técnico en Sistemas 🎓</h3>
+                </div>
+                <button
+                  class="cert-btn-small cert-modal-btn"
+                  data-cert-title="Técnico en Sistemas"
+                  data-cert-image="assets/certificates/tecnico-sistemas.jpeg"
+                >
+                  Ver 🔗
+                </button>
+              </article>
+
+              <article class="certification-card">
+                <div class="cert-header">
+                  <h3>Certificación inglés nivel B1 🌍</h3>
+                </div>
+                <button
+                  class="cert-btn-small cert-modal-btn"
+                  data-cert-title="Diploma Intermediate Core"
+                  data-cert-image="assets/certificates/diploma-intermediate-core.png"
+                >
+                  Ver 🔗
+                </button>
+              </article>
+
+              <article class="certification-card">
+                <div class="cert-header">
+                  <h3>Certificación inglés nivel B2 🌍</h3>
+                </div>
+                <span class="cert-btn-small cert-btn-disabled">En Proceso</span>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
     <!-- Modal para mostrar certificados -->
-    <div id="certModal" class="cert-modal">
+    <div
+      id="certModal"
+      class="cert-modal"
+      role="dialog"
+      aria-labelledby="certModalTitle"
+      aria-hidden="true"
+    >
       <div class="cert-modal-content">
-        <span class="cert-modal-close">&times;</span>
+        <button class="cert-modal-close" aria-label="Cerrar modal">
+          &times;
+        </button>
         <div class="cert-modal-header">
           <h3 id="certModalTitle">Certificado</h3>
         </div>
         <div class="cert-modal-body">
-          <img id="certModalImage" src="" alt="Certificado" />
+          <img id="certModalImage" src="" alt="Imagen del certificado" />
           <p class="cert-modal-placeholder">
-            📁 Espacio para la imagen del certificado<br>
+            📁 Espacio para la imagen del certificado<br />
           </p>
         </div>
       </div>
     </div>
-
   </body>
 </html>
