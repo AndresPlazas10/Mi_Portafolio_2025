@@ -6,9 +6,8 @@
   "scripts": {
     "start": "python -m http.server 8000",
     "serve": "npx live-server",
-    "build": "echo 'Static site - no build required' && exit 0",
-    "dev": "npx live-server",
-    "preview": "npx live-server"
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Deploy to your preferred hosting service'"
   },
   "repository": {
     "type": "git",

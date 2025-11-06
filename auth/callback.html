@@ -42,32 +42,64 @@
 
     <script>
         // Procesar el callback de autenticación
-        const urlParams = new URLSearchParams(window.location.search);
-        const accessToken = urlParams.get('access_token');
-        const refreshToken = urlParams.get('refresh_token');
-        const error = urlParams.get('error');
+        function handleAuthCallback() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const fragment = new URLSearchParams(window.location.hash.substring(1));
+                
+                // Obtener parámetros de la URL o fragment
+                const accessToken = urlParams.get('access_token') || fragment.get('access_token');
+                const refreshToken = urlParams.get('refresh_token') || fragment.get('refresh_token');
+                const error = urlParams.get('error') || fragment.get('error');
+                const errorDescription = urlParams.get('error_description') || fragment.get('error_description');
 
-        if (error) {
-            console.error('Error de autenticación:', error);
-            alert('Error en la autenticación: ' + error);
-            window.location.href = '/';
-        } else if (accessToken) {
-            // Guardar tokens en localStorage
-            localStorage.setItem('supabase_access_token', accessToken);
-            if (refreshToken) {
-                localStorage.setItem('supabase_refresh_token', refreshToken);
+                console.log('Callback URL:', window.location.href);
+                console.log('Access Token:', accessToken ? 'Present' : 'Not found');
+
+                if (error) {
+                    console.error('Error de autenticación:', error, errorDescription);
+                    document.querySelector('.loading h2').textContent = 'Error en la autenticación';
+                    document.querySelector('.loading p').textContent = error + (errorDescription ? ': ' + errorDescription : '');
+                    
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 5000);
+                } else if (accessToken) {
+                    // Guardar tokens en localStorage
+                    localStorage.setItem('supabase_access_token', accessToken);
+                    if (refreshToken) {
+                        localStorage.setItem('supabase_refresh_token', refreshToken);
+                    }
+                    
+                    document.querySelector('.loading h2').textContent = '¡Autenticación exitosa!';
+                    document.querySelector('.loading p').textContent = 'Redirigiendo...';
+                    
+                    // Redirigir a la página principal
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 2000);
+                } else {
+                    // Si no hay tokens ni errores, redirigir
+                    document.querySelector('.loading h2').textContent = 'Procesando...';
+                    document.querySelector('.loading p').textContent = 'Redirigiendo a la página principal...';
+                    
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 3000);
+                }
+            } catch (err) {
+                console.error('Error procesando callback:', err);
+                document.querySelector('.loading h2').textContent = 'Error inesperado';
+                document.querySelector('.loading p').textContent = 'Redirigiendo...';
+                
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 3000);
             }
-            
-            // Redirigir a la página principal
-            setTimeout(() => {
-                window.location.href = '/';
-            }, 2000);
-        } else {
-            // Si no hay tokens, redirigir a la página principal
-            setTimeout(() => {
-                window.location.href = '/';
-            }, 3000);
         }
+
+        // Ejecutar cuando la página cargue
+        document.addEventListener('DOMContentLoaded', handleAuthCallback);
     </script>
 </body>
 </html>

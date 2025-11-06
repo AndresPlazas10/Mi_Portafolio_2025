@@ -16,15 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Manejar enlace de FIERMART (listo pero sin URL)
-        const fiermartLink = document.querySelector('[data-project="fiermart"]:not(.project-link-placeholder):not(.project-demo-link)');
-        if (fiermartLink && fiermartLink.getAttribute('href') === '#') {
-            fiermartLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('🔗 Proyecto FIERMART listo para ser enlazado.\n\nPara agregar el enlace:\n• Edita el href en el HTML\n• O usa: updateProjectLink("fiermart", "tu-enlace")');
-            });
-        }
-
         // Manejar enlaces de demo
         demoLinks.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -75,18 +66,17 @@ function updateDemoLink(projectName, url) {
     }
 }
 
-/* 
-INSTRUCCIONES PARA ACTUALIZAR ENLACES:
+/*
+Gestión de enlaces de proyectos
 
-Cuando tengas listo un proyecto, puedes usar esta función en la consola del navegador:
+Para actualizar enlaces:
 
 Para FIERMART:
-updateProjectLink('fiermart', 'https://tu-enlace-fiermart.com');
+✅ Proyecto ya configurado: https://fiertmart.netlify.app/login
 
 Para Negozio:
 updateProjectLink('negozio', 'https://tu-enlace-negozio.com');
 
-O simplemente edita el HTML directamente cambiando:
-href="#" por href="tu-enlace-real"
-y removiendo las clases project-link-placeholder
+Para otros proyectos:
+updateProjectLink('nombre-proyecto', 'https://tu-enlace.com');
 */
