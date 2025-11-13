@@ -456,10 +456,12 @@ main {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.8rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   width: 100%;
   padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Responsive design para proyectos */
@@ -882,6 +884,7 @@ main {
   align-items: center;
   gap: 0.8rem;
   width: 100%;
+  color : #cccccc;
 }
 
 .cert-header h4 {
